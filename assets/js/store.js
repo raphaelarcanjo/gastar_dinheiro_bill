@@ -4,7 +4,7 @@ const store = new Vuex.Store({
         products: [
             { deduced: 0, count: 0, img: "https://neal.fun/spend/minified/bigmac.jpg", name: "Big Mac", price: "2" },
             { deduced: 0, count: 0, img: "https://neal.fun/spend/minified/cupofcoffee.jpg", name: "Xícara de Café", price: "4" },
-            { deduced: 0, count: 0, img: "https://neal.fun/spend/minified/book.jpg", name: "livro", price: "15" },
+            { deduced: 0, count: 0, img: "https://neal.fun/spend/minified/book.jpg", name: "Livro", price: "15" },
             { deduced: 0, count: 0, img: "https://neal.fun/spend/minified/videogame.jpg", name: "Vídeo Game", price: "60" },
             { deduced: 0, count: 0, img: "https://neal.fun/spend/minified/charity.jpg", name: "Caridade", price: "100" },
             { deduced: 0, count: 0, img: "https://neal.fun/spend/minified/headphones.jpg", name: "Headphones", price: "200" },
