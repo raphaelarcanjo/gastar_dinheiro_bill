@@ -7,6 +7,9 @@ Vue.component('card', {
     computed: {
         products: function() {
             return this.$store.state.products
+        },
+        total: function() {
+            return this.$store.state.total
         }
     },
     template: `
@@ -14,10 +17,10 @@ Vue.component('card', {
             <div v-for="product in products" class="cards__card">
                 <img :src="product.img" class="cards__card__img">
                 <h2 class="cards__card__title">{{product.name}}</h2>
-                <p class="cards__card__price">&dollar;{{product.price}}</p>
+                <p class="cards__card__price">&dollar;{{product.price.toLocaleString()}}</p>
                 <button @click="decrease(product)" class="cards__card__counter cards__card__counter--error" :disabled="product.count <= 0">Vender</button>
                     <input pattern="\d*" @input="calcTotal(product)" type="text" min="0" v-model="product.count" class="cards__card__input">
-                <button @click="increase(product)" class="cards__card__counter cards__card__counter--success">Comprar</button>
+                <button @click="increase(product)" class="cards__card__counter cards__card__counter--success" :disabled="total == 0 || total - product.price < 0">Comprar</button>
             </div>
         </div>
     `,

@@ -148,3 +148,71 @@ body {
         }
     }
 }
+
+// Café
+.coffee {
+    background-color: $dark-color;
+    color: $light-color;
+    text-decoration: none;
+    padding: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 3rem;
+}
+
+// Propaganda
+.propaganda {
+    padding: 3rem 0;
+    background-color: $white-color;
+    color: $dark-color;
+    text-align: center;
+    @include e('title') {
+        margin: 1rem auto;
+        font-size: 1.5rem;
+    }
+    @include e('author') {
+        margin: 1rem auto;
+        font-size: 1.2rem;
+        @include e('link') {
+            color: $dark-color;
+        }
+    }
+    @include e('link') {
+        margin: 1rem auto;
+        color: $dark-color;
+        font-size: 1.6rem;
+        text-decoration: none;
+    }
+    @include e('items') {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        @include e('link') {
+            max-width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            @include m('rer') {
+                background-image: url('../img/rer.png');
+            }
+            @include m('log') {
+                background: url('../img/forumlog.png');
+            }
+        }
+        @include e('title') {
+            border-radius: 10px;
+            display: inline-block;
+            margin: 0 auto;
+            margin-top: 20%;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 1rem;
+            color: $dark-color;
+            background-color: $light-color;
+            border: none;
+        }
+    }
+}
