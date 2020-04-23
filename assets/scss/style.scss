@@ -1,1 +1,117 @@
+// Variáveis
+@import "variables";
+// Mixins para o modelo BEM
 @import "bem";
+// Reset geral
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+// Customizações gerais
+body {
+    background-color: $light-color;
+    ;
+    color: $dark-color;
+    ;
+}
+
+.container {
+    max-width: 950px;
+    margin: 2rem auto;
+}
+
+// Header
+.title {
+    padding: 2rem 15rem;
+    background-color: $white-color;
+    @include e('link') {
+        color: $dark-color;
+        ;
+        text-decoration: none;
+    }
+}
+
+.presentation {
+    background-color: $white-color;
+    padding: 2rem;
+    margin: .5rem 0;
+    text-align: center;
+    @include e('img') {
+        border-radius: 50%;
+    }
+}
+
+// Valor total
+.total {
+    top: 0;
+    position: sticky;
+    text-align: center;
+    padding: 1rem;
+    background-color: $success-color;
+    font-size: 2.5em;
+    color: $white-color;
+    font-weight: 500;
+}
+
+// Cards
+.cards {
+    margin: .5rem 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    .card {
+        max-width: 100%;
+        background-color: $white-color;
+        text-align: center;
+        font-size: 18px;
+        padding: 20px 15px;
+        @include e('price') {
+            color: $success-color;
+            font-weight: 500;
+        }
+        @include e('input') {
+            width: 30%;
+            display: inline;
+            text-align: center;
+            height: 2rem;
+            font-size: 12pt;
+            border: 1px rgba(51, 51, 51, .2) solid;
+            &:focus {
+                border: 2px rgba(51, 51, 51, 1) solid;
+            }
+        }
+        @include e('counter') {
+            display: inline;
+            font-weight: 550;
+            font-size: 1rem;
+            height: 2rem;
+            border: none;
+            color: $white-color;
+            padding: 5px;
+            &:disabled {
+                background-color: $light-color;
+                ;
+                color: $dark-color;
+                ;
+            }
+            @include m('success') {
+                background-color: $success-color;
+            }
+            @include m('error') {
+                background-color: $error-color;
+            }
+        }
+    }
+}
+
+// Footer
+.footer {
+    background-color: $white-color;
+    color: $success-color;
+    text-align: center;
+    padding: 3rem;
+}
