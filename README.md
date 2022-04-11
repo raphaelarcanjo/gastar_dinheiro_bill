@@ -1,16 +1,14 @@
-# perfect-pay-teste
-Teste front-end para a Perfect Pay
-
-Desenvolva o site abaixo em VUE, com atenção na reatividade dos elementos da página. 
+# Gastar o dinheiro do tio Bill
+Desenvolvido o site abaixo em Vue, com foco na reatividade dos elementos da página.
 
 https://neal.fun/spend/
 
-Requisitos:
-- Utilizar Vuex;
-- Estilizar utilizando SASS;
-- Utilizar arquitetura BEM no CSS.
+Foi usado:
+- Vuex;
+- Estilização em SASS;
+- Arquitetura BEM no CSS.
 
-Será avaliado:
+Foco em:
 - Criação de Componentes;
 - Estrutura de código;
 - Organização do projeto;
